@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "playroom:start": "playroom start",
-    "playroom:build": "playroom build"
+    "playroom:build": "NODE_ENV=production playroom build"
   },
   "author": "",
   "license": "MIT",

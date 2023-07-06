@@ -1,5 +1,3 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
   components: "@aws-amplify/ui-react",
   outputPath: "./dist/playroom",
@@ -11,7 +9,10 @@ module.exports = {
   port: 9000,
   openBrowser: true,
   paramType: "search", // default is 'hash'
-  baseUrl: "/playroom/",
+  baseUrl:
+    process.env.NODE_ENV === "production"
+      ? "/amplify-ui-playroom/playroom/"
+      : "/",
   webpackConfig: () => ({
     module: {
       rules: [

@@ -1,6 +1,6 @@
 module.exports = {
   components: "@aws-amplify/ui-react",
-  outputPath: "./dist/playroom",
+  outputPath: "./docs",
 
   // Optional:
   title: "Amplify UI Components",
@@ -10,9 +10,7 @@ module.exports = {
   openBrowser: true,
   paramType: "search", // default is 'hash'
   baseUrl:
-    process.env.NODE_ENV === "production"
-      ? "/amplify-ui-playroom/playroom/"
-      : "/",
+    process.env.NODE_ENV === "production" ? "/amplify-ui-playroom/" : "/",
   webpackConfig: () => ({
     module: {
       rules: [
